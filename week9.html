@@ -123,30 +123,11 @@
     <button type="submit">Add Data</button>
   </form>
 
-  <div id="table-container">
-    <div class="table-controls">
-      <div class="table-controls-left">
-        <span>Tampilkan</span>
-        <select id="entries-select" onchange="entriesPerPage = this.value; currentPage = 1; displayTableData(); updatePagination();">
-          <option value="10">10</option>
-          <option value="25">25</option>
-          <option value="50">50</option>
-        </select>
-        <span>entri</span>
-      </div>
-      <div class="table-controls-right">
-        <span>Cari: </span>
-        <input type="text" id="search-input" onkeyup="searchTable()" />
-      </div>
+   <div id="table-container">
+    <table id="data-table">
+    </table>
+    <div class="pagination" id="pagination-container">
     </div>
-  
-    <table id="data-table"></table>
-  </div>
-  
-  <div id="pagination">
-    <button id="pagination-prev" onclick="changePage(-1);" style="float: left;">Sebelumnya</button>
-    <span id="pagination-info" style="display: inline-block; margin: 0 auto;"></span>
-    <button id="pagination-next" onclick="changePage(1);" style="float: right;">Selanjutnya</button>    
   </div>
   
   <script>
