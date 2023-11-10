@@ -97,11 +97,11 @@
   </style>
 </head>
 <body> 
-  <input type="text" id="url" placeholder="Please enter the URL here" value="https://shibasalsabilla10.alwaysdata.net/getcsv2json.php">
+  <input type="text" id="url" placeholder="Please enter the URL here" value="http://https://shibasalsabilla10.alwaysdata.net/getcsv2json.php">
   <button onclick="fetchData()">Submit</button>
   
   <!-- Formulir untuk menambahkan data -->
-  <form id="addForm">
+  <form id="addForm" onsubmit="addData(event)">
     <label for="id">Id:</label>
     <input type="text" id="id" name="id" required><br>
     
@@ -120,7 +120,7 @@
     <label for="Profesi">Profesi:</label>
     <input type="text" id="Profesi" name="Profesi" required><br>
     
-    <input type="button" value="Add Data" onclick="submitData()">
+    <button type="submit">Add Data</button>
   </form>
 
   <div id="table-container">
